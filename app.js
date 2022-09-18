@@ -28,3 +28,10 @@ button.addEventListener("click", () => {
 window.addEventListener("load", () => {
   input.focus();
 });
+
+input.addEventListener("keydown", (event) => {
+  if (event.keyCode == 13) {
+    button.click();
+    input.value = "";
+  }
+});
