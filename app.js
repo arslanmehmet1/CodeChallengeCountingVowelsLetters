@@ -15,8 +15,16 @@ button.addEventListener("click", () => {
 
     for (let letter of inputArr) {
       vowelArr.includes(letter) && counter++;
-
-      result.innerHTML = `<p>There is/are ${counter} vowel letters in the <span style="font-weight:600"=>"${input.value}"</span>sentence </p>`;
     }
+
+    result.innerHTML = `<p>There is/are <span style="font-weight:600">"${counter}"</span> vowel letters in the <span style="font-weight:600"=>"${input.value}"</span>sentence </p>`;
+
+    input.addEventListener("focus", () => {
+      input.value = "";
+    });
   }
+});
+
+window.addEventListener("load", () => {
+  input.focus();
 });
